@@ -8,6 +8,7 @@
  <body style="background-color:#99CCFF">
  <h1><img src="title.png"></h1></center>
  <script type = "text/javascript">
+ 
  function toggleMe(){
  var id = document.getElementById('Image1');
  if (id.style.display == "block"){
@@ -30,37 +31,48 @@
  // var finalpercent2=((name2/total)*100)
   //}
   function image1(){
-	var x = document.getElementById("x");
-	var imgs = x.getElementsByTagName("img");
-	imgs[0].src="red.png";
-	
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="blue";
+ctx.fill()
+
   }
   
   function image2(){
-  document.getElementById("green.png").style.display="";
-  }
-  function showImg(){
-   var number1 = document.getElementById("number1");
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="red";
+ctx.fill()
+}
 
-  var number2 = document.getElementById("number2");
+
+ <!-- function showImg()
+  // var number1 = document.getElementById("number1");
+
+//  var number2 = document.getElementById("number2");
   //parseInt("number2")
   //var number2 = parseInt("number2");
-  var txtOutput = document.getElementById("txtOutput");
+  //var txtOutput = document.getElementById("txtOutput");
 
-  var name =parseInt(number1.value, 10);
-  var name2 =parseInt(number2.value, 10);
-  var total=name+name2
-  var finalpercent2=Math.round(((name2/total)*100))
-  var finalpercent=Math.round(((name/total)*100))
+ // var name =parseInt(number1.value, 10);
+ // var name2 =parseInt(number2.value, 10);
+  //var total=name+name2
+  //var finalpercent2=Math.round(((name2/total)*100))
+  //var finalpercent=Math.round(((name/total)*100))
   //var percent = percent();
   //var percent2 = 
-  var txtdes2 =document.getElementById("txtdes2");
-  var des2 =txtdes2.value;
-  var txtdes = document.getElementById("txtdes");
-  var des =txtdes.value;
-  var txtfield=document.getElementById("txtfield");
-  var field=txtfield.value;
-  }
+ // var txtdes2 =document.getElementById("txtdes2");
+  //var des2 =txtdes2.value;
+  //var txtdes = document.getElementById("txtdes");
+  //var des =txtdes.value;
+  //var txtfield=document.getElementById("txtfield");
+  //var field=txtfield.value;
   function sayHi(){
  
   var number1 = document.getElementById("number1");
@@ -100,6 +112,7 @@
   ", " + finalpercent2 + " out of 100 " + field + " are " + des2 + ", and "+
   finalpercent3+ " out of 100 " + field + " are " + des3
   }
+  
   }
  </script>
  <link rel = "stylesheet"
@@ -147,18 +160,36 @@
 	<br><br>
 
 	<input type = "button"
-    value = "click me"
+    value = "get stats"
     onclick = "sayHi()"/>
   <input type = "text" 
     id = "txtOutput" style="Width:800px;" />
-
-	<script>
-	
-  
- </form>
- 
- <input type="submit" id="test" value="test" onclick="showImg()"/>
+<br><br><br><br>
+ <input type="submit" id="test" value="get display" onclick="showImg()"/>
 	<br><br>
-	<!--<img src="red.png" height="100" width="150">-->
+	</script>
+	
+      <script language="javascript">
+    window.onload=function() {
+      document.forms[0].reset();
+      placeFocus();
+    }       
+    function placeFocus() {
+      document.forms[0].elements[0].focus(); // assuming the first element
+    }
+    </script>
+	
+
+</form>
+<canvas id="myCanvas" width="200" height="100" style="border:0px solid #d3d3d3;">
+	<script>
+	var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(95,50,40,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="blue";
+ctx.fill()
+</script>
 	</body>
 </html>
