@@ -3,11 +3,27 @@
  <head>
  <meta charset = "UTF-8">
  <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
- <font face="Helvetica">
+ <font face="Courier New">
 <center>
- <body style="background-color:#99CCFF">
- <h1><img src="title.png"></h1></center>
+
+ <body style="background-color:#99CCFF;color:black">
+
+ <h1>   <img src="title.png"></h1></center><center>
+ <font size="2">
+ <p>Statistics are annoying and hard to understand. We all know that, so</p>
+<p>Simplify them! Setting your data out of 100 allows you to present data </p>
+<p>in a simplified and easy to understand way!!</p>
+ Click <a href="nice2.html">here</a> for an example of a completed form (like the one below)!!
+</p>
+</center>
  <script type = "text/javascript">
+   var x =400
+  var y=25
+  var x2=400
+  var y2=25
+  var x3 = 400
+  var y3 = 25
+ 
  
  function toggleMe(){
  var id = document.getElementById('Image1');
@@ -17,6 +33,52 @@
  else{
  id.style.display="block";
  }
+ }
+ function linebreak(){
+   document.createElement("br");
+   }
+ function display(){
+  
+  var number1 = document.getElementById("number1");
+  var number2 = document.getElementById("number2");  
+  //var number3 = document.getElementById("number3");
+  var txtOutput = document.getElementById("txtOutput");
+  var name =parseInt(number1.value, 10);
+  var name2 =parseInt(number2.value, 10);
+  //var name3 =parseInt(number3.value, 10);
+  var total=name+name2//+name3
+  //var finalpercent3=Math.round(((name3/total)*100));
+  var finalpercent2=Math.round(((name2/total)*100));
+  var finalpercent=Math.round(((name/total)*100));
+  //var txtdes3 = document.getElementById("txtdes3");
+  //var des3 = txtdes3.value;
+  var txtdes2 =document.getElementById("txtdes2");
+  var des2 =txtdes2.value;
+  var txtdes = document.getElementById("txtdes");
+  var des =txtdes.value;
+  var txtfield=document.getElementById("txtfield");
+  var field=txtfield.value;
+
+ for (i=0;i<=finalpercent; i++){
+ image1();
+ 
+ 
+ }
+ 
+ x2=x;
+ y2=y;
+ //y3=y;
+ //x3=x;
+ 
+ for (i=0;i<=finalpercent2;i++){
+ image2();
+ }
+//for (i=0;i<=finalpercent3;i++){
+//image3();
+//}
+ 
+ 
+ 
  }
   // from textBoxes.html
  // function percent(){
@@ -30,28 +92,53 @@
  // var total=name+name2
  // var finalpercent2=((name2/total)*100)
   //}
+
+
+  
   function image1(){
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
+ctx.arc(x,y,15,0,2*Math.PI);
 ctx.stroke();
-ctx.fillStyle="blue";
+ctx.fillStyle="#ff0000";
 ctx.fill()
+x+=50
+if (x>=c.width){
+y+=50
+x=400
+}
 
   }
   
+
   function image2(){
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
+ctx.arc(x2,y2,15,0,2*Math.PI);
 ctx.stroke();
-ctx.fillStyle="red";
+ctx.fillStyle="white";
 ctx.fill()
+x2+=50
+if (x2>=c.width){
+y2+=50
+x2=400}
 }
 
-
+<!--    function image3(){
+ //   var c = document.getElementById("myCanvas");
+//var ctx = c.getContext("2d");
+//ctx.beginPath();
+//ctx.arc(x3,y3,15,0,2*Math.PI);
+//ctx.stroke();
+//ctx.fillStyle="black";
+//ctx.fill()
+//x3+=50
+//if (x3>=c.width){
+//y3+=50
+//x3=400} -->
+  
  <!-- function showImg()
   // var number1 = document.getElementById("number1");
 
@@ -79,7 +166,7 @@ ctx.fill()
 
   var number2 = document.getElementById("number2");
   
-  var number3 = document.getElementById("number3");
+ // var number3 = document.getElementById("number3");
  
   //parseInt("number2")
   //var number2 = parseInt("number2");
@@ -87,15 +174,15 @@ ctx.fill()
 
   var name =parseInt(number1.value, 10);
   var name2 =parseInt(number2.value, 10);
-  var name3 =parseInt(number3.value, 10);
-  var total=name+name2+name3
-  var finalpercent3=Math.round(((name3/total)*100));
+//  var name3 =parseInt(number3.value, 10);
+  var total=name+name2//+name3
+ // var finalpercent3=Math.round(((name3/total)*100));
   var finalpercent2=Math.round(((name2/total)*100));
   var finalpercent=Math.round(((name/total)*100));
   //var percent = percent();
   //var percent2 = 
-  var txtdes3 = document.getElementById("txtdes3");
-  var des3 = txtdes3.value;
+ // var txtdes3 = document.getElementById("txtdes3");
+ // var des3 = txtdes3.value;
   var txtdes2 =document.getElementById("txtdes2");
   var des2 =txtdes2.value;
   var txtdes = document.getElementById("txtdes");
@@ -104,14 +191,14 @@ ctx.fill()
   var field=txtfield.value;
   //parseInt("name")
   //parseInt("name2")
-  if (finalpercent3==0){
-  txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
-  " and " + finalpercent2 + " out of 100 " + field + " are " + des2}
-  else{
-    txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
-  ", " + finalpercent2 + " out of 100 " + field + " are " + des2 + ", and "+
-  finalpercent3+ " out of 100 " + field + " are " + des3
-  }
+  //if (finalpercent3==0)
+ txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
+  " and " + finalpercent2 + " out of 100 " + field + " are " + des2
+ // else
+  //  txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
+  //", " + finalpercent2 + " out of 100 " + field + " are " + des2 + ", and "+
+  //finalpercent3+ " out of 100 " + field + " are " + des3
+  //
   
   }
  </script>
@@ -119,11 +206,11 @@ ctx.fill()
    type = "textcss"
    href = "textBoxes.css" />
  </head>
- <body><font face="Helvetica">
+ <body><font face="Courier New">
 <font size="2">
- <div onmouseover="toggleMe()" onmouseout="toggleMe()">
+ <!--<div onmouseover="toggleMe()" onmouseout="toggleMe()">
  Hover here to check out a completed example!
-</div>
+</div>-->
 <img src="example.png" alt="example" id="Image1" style="display:none;"/>
  <form action = "">
  <br>
@@ -138,7 +225,7 @@ ctx.fill()
   <input type = "text"
     id = "txtdes" />
 	<br><br>
-  <label>Value</label>
+<label>Value</label>
   <input type = "number"
     id = "number1" />
 
@@ -147,24 +234,30 @@ ctx.fill()
 	<label>Element Description </label>
 	<input type="text"
 	id="txtdes2"/><br><br>
-	<label>Value</label>
+<label>Value</label>
 	<input type="number"
 	id="number2"/>
 	<br><br>
-	<label>Element Description</label>
+	<!--<label>Element Description</label>
 	<input type="text"
 	id="txtdes3"/><br><br>
 	<label>Value</label>
 	<input type="number"
 	id="number3"/>
-	<br><br>
+	<br><br>-->
 
 	<input type = "button"
     value = "get stats"
+	style= "font-family:'Courier New';"
     onclick = "sayHi()"/>
   <input type = "text" 
     id = "txtOutput" style="Width:800px;" />
-<br><br><br><br>
+	<br><br>
+	<input type="button"
+	style="font-family:'Courier New';"
+	value = "display graphics"
+	onclick="display()"/>
+<br><br><br>
 
 	<br><br>
 	</script>
@@ -178,18 +271,11 @@ ctx.fill()
       document.forms[0].elements[0].focus(); // assuming the first element
     }
     </script>
-	
+
 
 </form>
-<canvas id="myCanvas" width="200" height="100" style="border:0px solid #d3d3d3;">
-	<script>
-	var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(95,50,40,0,2*Math.PI);
-ctx.stroke();
-ctx.fillStyle="blue";
-ctx.fill()
-</script>
+<canvas id="myCanvas" width="900" height="500" style="border:0px solid #d3d3d3;">
+	</canvas>
+	<br><br>
 	</body>
 </html>
