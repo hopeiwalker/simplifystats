@@ -58,7 +58,22 @@
   var des =txtdes.value;
   var txtfield=document.getElementById("txtfield");
   var field=txtfield.value;
-
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(x,y,15,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="#ff0000";
+ctx.fill()
+"= des"
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(x,y,15,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="#fff";
+ctx.fill()
+"=des2"
  for (i=0;i<=finalpercent; i++){
  image1();
  
@@ -262,6 +277,7 @@ x2=400}
 	<br><br>
 	</script>
 	
+	
       <script language="javascript">
     window.onload=function() {
       document.forms[0].reset();
@@ -272,7 +288,23 @@ x2=400}
     }
     </script>
 
+	<style>
+	footer {
+    display: block;
+    position:fixed;
+    height:20px;
+    background-color:#99ccff;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+	
+}
+}
 
+</style>
+<footer><center><font size="1">created by ashtan&hopewalker
+</footer>
 </form>
 <canvas id="myCanvas" width="900" height="500" style="border:0px solid #d3d3d3;">
 	</canvas>
