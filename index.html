@@ -14,24 +14,49 @@
 
  <img src="title.png"></center><center>
  <font size="2">
- 
-
-<div>
-
-<ul class="breadcrumb">
-<style>
-.breadcrumb li a    {
-    color:#ff0000;
+ <style>
+ 	 /* Remove margins and padding from the list, and add a black background color */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff;
 }
-</style>
 
-	<li><a href="howto.html">how to</a></li>
-	<li><a href="#">about</a></li>
-	<li><a href="nice.html">simplify stats!!</a></li>
+/* Float the list items side by side */
+ul.topnav li {float: left;}
 
+/* Style the links inside the list items */
+ul.topnav li a {
 	
-	</ul></style>
-	</div>
+    display: inline-block;
+    color: #ff0000;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: 0.3s;
+    font-size: 17px;
+    
+}
+
+/* Change background color of links on hover */
+ul.topnav li a:hover {background-color: #ff0001;}
+
+/* Hide the list item that contains the link that should open and close the topnav on small screens */
+ul.topnav li.icon {display: none;}
+ </style>
+
+ <ul class="topnav">
+  <li><a href="howto.html">how to</a></li>
+  <li><a href="#">about</a></li>
+  <li><a href="nice.html">simplify stats!!</a></li>
+
+  <li class="icon">
+    <a href="javascript:void(0);" onclick="myFunction()">&#9776;</a>
+  </li>
+</ul>
+
  <p>Statistics are <b>annoying</b> and <b>hard to understand</b>. We all know that, so</p>
 <p>Simplify them! Setting your data out of 100 allows you to present data </p>
 <p>in a simplified and easy to understand way!!</p>
