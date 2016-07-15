@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+ <head>
+ <meta charset = "UTF-8">
+ <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+ <font face="Courier New">
+ <a href="nice.html">
+<img title="back" alt="back" src="backarrow.png" height="20" width="20">
+</a>
+<center>
+
+ <body style="background-color:#99CCFF;color:black">
+
+ <img src="title.png"></center><center>
+
+</center>
+ <script type = "text/javascript">
+   var x =400
+  var y=25
+  var x2=400
+  var y2=25
+  var x3 = 400
+  var y3 = 25
+ 
+ 
+ function toggleMe(){
+ var id = document.getElementById('Image1');
+ if (id.style.display == "block"){
+ id.style.display="none";
+ }
+ else{
+ id.style.display="block";
+ }
+ }
+ function linebreak(){
+   document.createElement("br");
+   }
+ function display(){
+  
+  var number1 = document.getElementById("number1");
+  var number2 = document.getElementById("number2");  
+  var number3 = document.getElementById("number3");
+  var txtOutput = document.getElementById("txtOutput");
+  var name =parseInt(number1.value, 10);
+  var name2 =parseInt(number2.value, 10);
+  var name3 =parseInt(number3.value, 10);
+  var total=name+name2+name3
+  var finalpercent3=Math.round(((name3/total)*100));
+  var finalpercent2=Math.round(((name2/total)*100));
+  var finalpercent=Math.round(((name/total)*100));
+  var txtdes3 = document.getElementById("txtdes3");
+  var des3 = txtdes3.value;
+  var txtdes2 =document.getElementById("txtdes2");
+  var des2 =txtdes2.value;
+  var txtdes = document.getElementById("txtdes");
+  var des =txtdes.value;
+  var txtfield=document.getElementById("txtfield");
+  var field=txtfield.value;
+
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+
+//image1();"= des";
+
+//image2();"= des2";
+ for (i=0;i<=finalpercent; i++){
+ image1();
+ 
+ 
+ }
+ 
+ x2=x;
+ y2=y;
+
+ 
+ for (i=0;i<=finalpercent2;i++){
+ image2();
+ }
+ x3=x2;
+ y3=y2;
+for (i=0;i<=finalpercent3;i++){
+image3();
+}
+ 
+ 
+ 
+ }
+  // from textBoxes.html
+ // function percent(){
+ // var name = txtName.value;
+ // var name2 =txtName2.value;
+ // var total=name+name2
+ // var finalpercent=((name/total)*100)}
+ // function percent2(){
+ // var name= txtName.value;
+ // var name2= txtName2.value;
+ // var total=name+name2
+ // var finalpercent2=((name2/total)*100)
+  //}
+
+
+  
+  function image1(){
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(x,y,15,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="#ff0000";
+ctx.fill()
+x+=50
+if (x>=c.width){
+y+=50
+x=400
+}
+
+  }
+  
+
+  function image2(){
+  var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(x2,y2,15,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="white";
+ctx.fill()
+x2+=50
+if (x2>=c.width){
+y2+=50
+x2=400}
+}
+
+    function image3(){
+    var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(x3,y3,15,0,2*Math.PI);
+ctx.stroke();
+ctx.fillStyle="black";
+ctx.fill()
+x3+=50
+if (x3>=c.width){
+y3+=50
+x3=400}
+}
+  
+ <!-- function showImg()
+  // var number1 = document.getElementById("number1");
+
+//  var number2 = document.getElementById("number2");
+  //parseInt("number2")
+  //var number2 = parseInt("number2");
+  //var txtOutput = document.getElementById("txtOutput");
+
+ // var name =parseInt(number1.value, 10);
+ // var name2 =parseInt(number2.value, 10);
+  //var total=name+name2
+  //var finalpercent2=Math.round(((name2/total)*100))
+  //var finalpercent=Math.round(((name/total)*100))
+  //var percent = percent();
+  //var percent2 = 
+ // var txtdes2 =document.getElementById("txtdes2");
+  //var des2 =txtdes2.value;
+  //var txtdes = document.getElementById("txtdes");
+  //var des =txtdes.value;
+  //var txtfield=document.getElementById("txtfield");
+  //var field=txtfield.value;
+  function sayHi(){
+ 
+  var number1 = document.getElementById("number1");
+
+  var number2 = document.getElementById("number2");
+  
+ // var number3 = document.getElementById("number3");
+ 
+  //parseInt("number2")
+  //var number2 = parseInt("number2");
+  var txtOutput = document.getElementById("txtOutput");
+
+  var name =parseInt(number1.value, 10);
+  var name2 =parseInt(number2.value, 10);
+  var name3 =parseInt(number3.value, 10);
+  var total=name+name2//+name3
+  var finalpercent3=Math.round(((name3/total)*100));
+  var finalpercent2=Math.round(((name2/total)*100));
+  var finalpercent=Math.round(((name/total)*100));
+  var txtdes3 = document.getElementById("txtdes3");
+  var des3 = txtdes3.value;
+  var txtdes2 =document.getElementById("txtdes2");
+  var des2 =txtdes2.value;
+  var txtdes = document.getElementById("txtdes");
+  var des =txtdes.value;
+  var txtfield=document.getElementById("txtfield");
+  var field=txtfield.value;
+  //parseInt("name")
+  //parseInt("name2")
+  if (finalpercent3==0)
+ txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
+  " and " + finalpercent2 + " out of 100 " + field + " are " + des2
+  else
+    txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
+  ", " + finalpercent2 + " out of 100 " + field + " are " + des2 + ", and "+
+  finalpercent3+ " out of 100 " + field + " are " + des3
+  
+  
+  }
+ </script>
+ <link rel = "stylesheet"
+   type = "textcss"
+   href = "textBoxes.css" />
+ </head>
+ <body><font face="Courier New">
+<font size="2">
+ <!--<div onmouseover="toggleMe()" onmouseout="toggleMe()">
+ Hover here to check out a completed example!
+</div>-->
+<img src="example.png" alt="example" id="Image1" style="display:none;"/>
+ <form action = "">
+ <br>
+ <br>
+ 
+  <label>Statistical Field<label>
+ 
+  <input type="text"
+  id="txtfield"/>
+  <br><br>
+  <label>Element Description</label>
+  <input type = "text"
+    id = "txtdes" />
+	<br><br>
+<label>Value</label>
+  <input type = "number"
+    id = "number1" />
+
+	<br>
+	<br>
+	<label>Element Description </label>
+	<input type="text"
+	id="txtdes2"/><br><br>
+<label>Value</label>
+	<input type="number"
+	id="number2"/>
+	<br><br>
+	<label>Element Description</label>
+	<input type="text"
+	id="txtdes3"/><br><br>
+	<label>Value</label>
+	<input type="number"
+	id="number3"/>
+	<br><br>
+
+	<input type = "button"
+    value = "get stats"
+	style= "font-family:'Courier New';"
+    onclick = "sayHi()"/>
+  <input type = "text" 
+    id = "txtOutput" style="Width:800px;" />
+	<br><br>
+	<input type="button"
+	style="font-family:'Courier New';"
+	value = "display graphics"
+	onclick="display()"/>
+<br><br><br>
+
+	<br><br>
+	</script>
+	
+	
+      <script language="javascript">
+    window.onload=function() {
+      document.forms[0].reset();
+      placeFocus();
+    }       
+    function placeFocus() {
+      document.forms[0].elements[0].focus(); // assuming the first element
+    }
+    </script>
+
+	<style>
+	footer {
+    display: block;
+    position:fixed;
+    height:20px;
+    background-color:#99ccff;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    margin-bottom:0px;
+	
+}
+}
+
+</style>
+<footer><center><font size="1">created by ashtan&hopewalker
+</footer>
+</form>
+<canvas id="myCanvas" width="900" height="500" style="border:0px solid #d3d3d3;">
+	</canvas>
+	<br><br>
+	</body>
+</html>
