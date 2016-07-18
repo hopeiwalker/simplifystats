@@ -104,7 +104,7 @@ ul.topnav li.icon {display: none;}
 //ctx.fillStyle="green";
 //ctx.fill()
 //"=des2"
- for (i=1;i<=Math.floor(finalpercent); i++){
+ for (i=1;i<=Math.ceil(finalpercent); i++){
  image1();
  
  
@@ -122,7 +122,7 @@ ul.topnav li.icon {display: none;}
  //y3=y;
  //x3=x;
  
- for (i=0;i<=Math.ceil(finalpercent2);i++){
+ for (i=0;i<=Math.floor(finalpercent2);i++){
  image2();
 
 //for (i=0;i<=finalpercent3;i++){
@@ -193,8 +193,8 @@ x2=400}
 //  var name3 =parseInt(number3.value, 10);
   var total=name+name2//+name3
  // var finalpercent3=Math.round(((name3/total)*100));
-  var finalpercent2=Math.round(((name2/total)*100));
-  var finalpercent=Math.round(((name/total)*100));
+  var finalpercent2=Math.floor(((name2/total)*100));
+  var finalpercent=Math.ceil(((name/total)*100));
   var percenttotal = finalpercent2+finalpercent
  // if (percenttotal>100){
  // 	finalpercent2=finalpercent2
