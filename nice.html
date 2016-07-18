@@ -78,7 +78,7 @@ ul.topnav li.icon {display: none;}
   //var name3 =parseInt(number3.value, 10);
   var total=name+name2//+name3
   //var finalpercent3=Math.round(((name3/total)*100));
-  var finalpercent2=Math.round(((name2/total)*100));
+  var finalpercent2=Math.ceil(((name2/total)*100));
   var finalpercent=Math.floor(((name/total)*100));
   //var txtdes3 = document.getElementById("txtdes3");
   //var des3 = txtdes3.value;
@@ -122,7 +122,7 @@ ul.topnav li.icon {display: none;}
  //y3=y;
  //x3=x;
  
- for (i=0;i<=Math.floor(finalpercent2);i++){
+ for (i=0;i<=Math.ceil(finalpercent2);i++){
  image2();
 
 //for (i=0;i<=finalpercent3;i++){
