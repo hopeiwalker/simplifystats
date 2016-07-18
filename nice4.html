@@ -95,7 +95,21 @@ var ctx = c.getContext("2d");
 //image1();"= des";
 
 //image2();"= des2";
- for (i=0;i<=finalpercent; i++){
+  var finalpercent2=Math.round(((name2/total)*100));
+  var finalpercent=Math.round(((name/total)*100));
+  var finalpercent=Math.round(((name3/total)*100));
+  var percenttotal = finalpercent2+finalpercent+finalpercent3
+  if (percenttotal>100){
+  	finalpercent2=finalpercent2-1
+  	finalpercent3=finalpercent3
+  	finalpercent=finalpercent-1
+  }
+  else{
+  	finalpercent2=finalpercent2
+  	finalpercent3=finalpercent3
+  	finalpercent=finalpercent
+  }
+ for (i=1;i<=finalpercent; i++){
  image1();
  
  
