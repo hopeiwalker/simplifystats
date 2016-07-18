@@ -109,10 +109,10 @@ ul.topnav li.icon {display: none;}
  
  
  }
-// if (total>100){
-// 	finalpercent=finalpercent-1
+ //if (total>100){
+ //	finalpercent=finalpercent-1
  	
- //}
+// }
 //if (total=100){
 //	finalpercent=finalpercent
 //}
@@ -196,14 +196,14 @@ x2=400}
   var finalpercent2=Math.round(((name2/total)*100));
   var finalpercent=Math.round(((name/total)*100));
   var percenttotal = finalpercent2+finalpercent
- // if (percenttotal>100){
- // 	finalpercent2=finalpercent2-1
-  //	finalpercent=finalpercent
-  //}
-  //else{
-  //	finalpercent2=finalpercent2
-  //	finalpercent=finalpercent
- // }
+  if (percenttotal>100){
+  	finalpercent2=finalpercent2-1
+  	finalpercent=finalpercent
+  }
+  else{
+  	finalpercent2=finalpercent2
+  	finalpercent=finalpercent
+  }
   //var percent = percent();
   //var percent2 = 
  // var txtdes3 = document.getElementById("txtdes3");
