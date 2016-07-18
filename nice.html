@@ -89,21 +89,21 @@ ul.topnav li.icon {display: none;}
   var txtfield=document.getElementById("txtfield");
   var field=txtfield.value;
   var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(x,y,15,0,2*Math.PI);
-ctx.stroke();
-ctx.fillStyle="black";
-ctx.fill()
-"= des"
-  var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.beginPath();
-ctx.arc(x,y,15,0,2*Math.PI);
-ctx.stroke();
-ctx.fillStyle="green";
-ctx.fill()
-"=des2"
+//var ctx = c.getContext("2d");
+//ctx.beginPath();
+//ctx.arc(x,y,15,0,2*Math.PI);
+//ctx.stroke();
+//ctx.fillStyle="black";
+//ctx.fill()/
+//"= des"
+ // var c = document.getElementById("myCanvas");
+//var ctx = c.getContext("2d");
+//ctx.beginPath();
+//ctx.arc(x,y,15,0,2*Math.PI);
+//ctx.stroke();
+//ctx.fillStyle="green";
+//ctx.fill()
+//"=des2"
  for (i=1;i<=Math.floor(finalpercent); i++){
  image1();
  
@@ -151,6 +151,7 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.arc(x,y,15,0,2*Math.PI);
 ctx.stroke();
+ctx.lineWidth=0
 ctx.fillStyle="#FFD1DC";
 ctx.fill()
 x+=50
@@ -166,6 +167,7 @@ var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.arc(x2,y2,15,0,2*Math.PI);
 ctx.stroke();
+ctx.lineWidth=0
 ctx.fillStyle="#BDFCC9";
 ctx.fill()
 x2+=50
