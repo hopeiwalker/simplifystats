@@ -90,6 +90,8 @@ ul.topnav li.icon {display: none;}
   var field=txtfield.value;
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+var finalfinal = Math.floor("finalpercent");
+var finalfinal2 = Math.round("finalpercent2");
 ctx.beginPath();
 ctx.arc(x,y,15,0,2*Math.PI);
 ctx.stroke();
@@ -104,7 +106,7 @@ ctx.stroke();
 ctx.fillStyle="#fff";
 ctx.fill()
 "=des2"
- for (i=0;i<=finalpercent; i++){
+ for (i=0;i<=finalfinal; i++){
  image1();
  
  
@@ -115,7 +117,7 @@ ctx.fill()
  //y3=y;
  //x3=x;
  
- for (i=0;i<=finalpercent2;i++){
+ for (i=0;i<=finalfinal2;i++){
  image2();
  }
 //for (i=0;i<=finalpercent3;i++){
