@@ -90,8 +90,6 @@ ul.topnav li.icon {display: none;}
   var field=txtfield.value;
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
-var finalfinal = Math.floor("finalpercent");
-var finalfinal2 = Math.round("finalpercent2");
 ctx.beginPath();
 ctx.arc(x,y,15,0,2*Math.PI);
 ctx.stroke();
@@ -106,7 +104,7 @@ ctx.stroke();
 ctx.fillStyle="#fff";
 ctx.fill()
 "=des2"
- for (i=0;i<=finalfinal; i++){
+ for (i=0;i<=finalpercent; i++){
  image1();
  
  
@@ -117,7 +115,7 @@ ctx.fill()
  //y3=y;
  //x3=x;
  
- for (i=0;i<=finalfinal2;i++){
+ for (i=0;i<=finalpercent2;i++){
  image2();
  }
 //for (i=0;i<=finalpercent3;i++){
@@ -139,8 +137,6 @@ ctx.fill()
  // var total=name+name2
  // var finalpercent2=((name2/total)*100)
   //}
-
-
   
   function image1(){
   var c = document.getElementById("myCanvas");
@@ -155,10 +151,8 @@ if (x>=c.width){
 y+=50
 x=400
 }
-
   }
   
-
   function image2(){
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
@@ -172,7 +166,6 @@ if (x2>=c.width){
 y2+=50
 x2=400}
 }
-
 <!--    function image3(){
  //   var c = document.getElementById("myCanvas");
 //var ctx = c.getContext("2d");
@@ -188,12 +181,10 @@ x2=400}
   
  <!-- function showImg()
   // var number1 = document.getElementById("number1");
-
 //  var number2 = document.getElementById("number2");
   //parseInt("number2")
   //var number2 = parseInt("number2");
   //var txtOutput = document.getElementById("txtOutput");
-
  // var name =parseInt(number1.value, 10);
  // var name2 =parseInt(number2.value, 10);
   //var total=name+name2
@@ -210,7 +201,6 @@ x2=400}
   function sayHi(){
  
   var number1 = document.getElementById("number1");
-
   var number2 = document.getElementById("number2");
   
  // var number3 = document.getElementById("number3");
@@ -218,7 +208,6 @@ x2=400}
   //parseInt("number2")
   //var number2 = parseInt("number2");
   var txtOutput = document.getElementById("txtOutput");
-
   var name =parseInt(number1.value, 10);
   var name2 =parseInt(number2.value, 10);
 //  var name3 =parseInt(number3.value, 10);
@@ -276,7 +265,6 @@ x2=400}
 <label>Value</label>
   <input type = "number"
     id = "number1" />
-
 	<br>
 	<br>
 	<label>Element Description </label>
@@ -293,7 +281,6 @@ x2=400}
 	<input type="number"
 	id="number3"/>
 	<br><br>-->
-
 	<input type = "button"
     value = "get stats"
 	style= "font-family:'Courier New';"
@@ -307,7 +294,6 @@ x2=400}
 	onclick="display()"/>
 	
 <br><br><br>
-
 	<br><br>
 	</script>
 	
@@ -321,7 +307,6 @@ x2=400}
       document.forms[0].elements[0].focus(); // assuming the first element
     }
     </script>
-
 	<style>
 	footer {
     display: block;
@@ -335,7 +320,6 @@ x2=400}
 	
 }
 }
-
 </style>
 <footer><center><font size="1">created by ashtan&hopewalker
 </footer>
