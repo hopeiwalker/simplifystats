@@ -132,44 +132,48 @@ image3();
 
 
   
+  
   function image1(){
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.arc(x,y,15,0,2*Math.PI);
-ctx.stroke();
-ctx.fillStyle="#ff0000";
+//ctx.stroke();
+ctx.strokeStyle="#99ccff"
+ctx.lineWidth=0
+ctx.fillStyle="#FFD1DC";
 ctx.fill()
 x+=50
 if (x>=c.width){
 y+=50
 x=400
 }
-
   }
   
-
   function image2(){
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.arc(x2,y2,15,0,2*Math.PI);
-ctx.stroke();
-ctx.fillStyle="white";
+//ctx.stroke();
+ctx.strokeStyle="#99ccff"
+ctx.lineWidth=0
+ctx.fillStyle="#BDFCC9";
 ctx.fill()
 x2+=50
 if (x2>=c.width){
 y2+=50
 x2=400}
 }
+  
 
     function image3(){
     var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.beginPath();
 ctx.arc(x3,y3,15,0,2*Math.PI);
-ctx.stroke();
-ctx.fillStyle="black";
+//ctx.stroke();
+ctx.fillStyle="#fff";
 ctx.fill()
 x3+=50
 if (x3>=c.width){
