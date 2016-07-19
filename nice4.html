@@ -234,11 +234,31 @@ x3=400}
   var field=txtfield.value;
   //parseInt("name")
   //parseInt("name2")
+  
     txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
   ", " + finalpercent2 + " out of 100 " + field + " are " + des2 + ", and "+
   finalpercent3+ " out of 100 " + field + " are " + des3
    
    var percenttotal = finalpercent2+finalpercent+finalpercent3
+   
+   if (percenttotal>100){
+   	finalpercent=finalpercent
+   	finalpercent2=finalpercent2-1
+   	finalpercent3=finalpercent3
+   }
+   if (percenttotal==100){
+   	finalpercent=finalpercent
+   	finalpercent2=finalpercent2
+   	finalpercent3=finalpercent3
+   }
+   if (percenttotal<100){
+   	finalpercent=finalpercent
+   	finalpercent2=finalpercent2+1
+   	finalpercent3=finalpercent3
+   }
+   }
+   }
+   }
   //if (percenttotal>100){
   //	finalpercent3=finalpercent3
   //	finalpercent2=finalpercent2-1
