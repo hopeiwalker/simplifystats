@@ -77,7 +77,7 @@ ul.topnav li.icon {display: none;}
   var name2 =parseInt(number2.value, 10);
   var name3 =parseInt(number3.value, 10);
   var total=(name+name2+name3);
-  var finalpercent3=Math.floor(((name3/total)*100));
+  var finalpercent3=Math.ceil(((name3/total)*100));
   var finalpercent2=Math.ceil(((name2/total)*100));
   var finalpercent=Math.ceil(((name/total)*100));
   var txtdes3 = document.getElementById("txtdes3");
@@ -221,7 +221,7 @@ x3=400}
   var name2 =parseInt(number2.value, 10);
   var name3 =parseInt(number3.value, 10);
   var total=name+name2+name3
-  var finalpercent3=Math.floor(((name3/total)*100));
+  var finalpercent3=Math.ceil(((name3/total)*100));
   var finalpercent2=Math.ceil(((name2/total)*100));
   var finalpercent=Math.ceil(((name/total)*100));
   var txtdes3 = document.getElementById("txtdes3");
