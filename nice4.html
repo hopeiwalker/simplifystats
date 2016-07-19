@@ -91,6 +91,26 @@ ul.topnav li.icon {display: none;}
 
   var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
+  
+     var percenttotal = finalpercent2+finalpercent+finalpercent3
+   
+   if (percenttotal==100){
+   	finalpercent=finalpercent
+   	finalpercent2=finalpercent2
+   	finalpercent3=finalpercent3
+   }
+   if (percenttotal<100){
+   	finalpercent=finalpercent
+   	finalpercent2=finalpercent2
+   	finalpercent3=finalpercent3+1
+   	
+   }
+      if (percenttotal>100){
+   	finalpercent=finalpercent
+   	finalpercent2=finalpercent2-1
+   	finalpercent3=finalpercent3
+   }
+  
 
 //image1();"= des";
 
