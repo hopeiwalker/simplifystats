@@ -237,11 +237,6 @@ x3=400}
   
      var percenttotal = finalpercent2+finalpercent+finalpercent3
    
-   if (percenttotal>100){
-   	finalpercent=finalpercent
-   	finalpercent2=finalpercent2-1
-   	finalpercent3=finalpercent3
-   }
    if (percenttotal==100){
    	finalpercent=finalpercent
    	finalpercent2=finalpercent2
@@ -252,6 +247,11 @@ x3=400}
    	finalpercent2=finalpercent2
    	finalpercent3=finalpercent3+1
    	
+   }
+      if (percenttotal>100){
+   	finalpercent=finalpercent
+   	finalpercent2=finalpercent2-1
+   	finalpercent3=finalpercent3
    }
   
     txtOutput.value= finalpercent+ " out of 100 " + field +" are "+ des +
